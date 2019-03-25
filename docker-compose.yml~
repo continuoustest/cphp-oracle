@@ -1,6 +1,0 @@
-version: '3'
-services:
-  oracle:
-    image: "oracle:latest"
-    ports:
-    - "1521:1521"
