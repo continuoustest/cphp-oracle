@@ -43,7 +43,7 @@ php -r "unlink('composer-setup.php');"
 ```
 php composer.phar require --dev behat/behat
 ```
-* Verify Behat:
+* Verifying Behat:
 ```
 vendor/bin/behat -V
 ```
