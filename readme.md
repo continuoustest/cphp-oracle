@@ -25,10 +25,10 @@ lsnrctl reload
 
 * On the local environment (client) :
 ```
-downloading client librairies
-pecl oci8
-composer jpina/oci8
-/bin/bash -c "echo '127.0.0.1 $(hostname)' >> /etc/hosts"
+"downloading client librairies"
+pecl install oci8
+php path/to/composer.phar require jpina/oci8
+(sudo) /bin/bash -c "echo '127.0.0.1 $(hostname)' >> /etc/hosts"
 ```
 
 #### Configuring Behat on the local environment :
