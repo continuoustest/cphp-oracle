@@ -8,7 +8,7 @@ These instructions will get you running on your local machine for development an
 
 ### Prerequisites
 
-You need to have an access to the cphp oracle container
+You need to access to the cphp oracle container
  
 ### Installing
 
@@ -24,10 +24,12 @@ lsnrctl reload
 ```
 
 * On the local environment (client) :
-Install client librairies
+```
+downloading client librairies
 pecl oci8
 composer jpina/oci8
-On MacOS /bin/bash -c "echo '127.0.0.1 $(hostname)' >> /etc/hosts"
+/bin/bash -c "echo '127.0.0.1 $(hostname)' >> /etc/hosts"
+```
 
 #### Configuring Behat on the local environment :
 * Installing composer :
