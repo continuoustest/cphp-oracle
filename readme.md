@@ -12,25 +12,6 @@ You need to access to the cphp oracle container
  
 ### Installing
 
-#### Configuring Oracle (Client & Server) :
-
-* Inside the container (server) :
-```
-lsnrctl start
-/bin/bash -c "echo '127.0.0.1 $HOSTNAME' >> /etc/hosts"
-expose port 1521
-execute /u01/app/oracle/runOracle.sh
-lsnrctl reload
-```
-
-* On the local environment (client) :
-```
-"downloading client librairies"
-pecl install oci8
-php path/to/composer.phar require jpina/oci8
-(sudo) /bin/bash -c "echo '127.0.0.1 $(hostname)' >> /etc/hosts"
-```
-
 #### Configuring Behat on the local environment :
 * Installing composer :
 ```
@@ -46,4 +27,23 @@ php composer.phar require --dev behat/behat
 * Verifying Behat:
 ```
 vendor/bin/behat -V
+```
+
+#### Configuring Oracle (Client & Server) :
+
+* Inside the container (server) :
+```
+lsnrctl start
+/bin/bash -c "echo '127.0.0.1 $HOSTNAME' >> /etc/hosts"
+expose port 1521
+execute /u01/app/oracle/runOracle.sh
+lsnrctl reload
+```
+
+* In the local environment (client) :
+```
+"downloading client librairies"
+pecl install oci8
+php path/to/composer.phar require jpina/oci8
+(sudo) /bin/bash -c "echo '127.0.0.1 $(hostname)' >> /etc/hosts"
 ```
