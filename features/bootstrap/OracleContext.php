@@ -19,7 +19,7 @@ class OracleContext implements Context
      */
     public function iCouldDoASelect()
     {
-	$resource = oci_connect('ORACLE', 'ORACLE', '172.18.0.3/XE');
+	$resource = oci_connect('ORACLE', 'ORACLE', '0.0.0.0/XE');
 	$query = oci_parse($resource, 'SELECT 40+2 FROM dual');
 	$result = oci_execute($query);
 
