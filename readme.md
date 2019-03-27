@@ -12,16 +12,6 @@ You need to access to the cphp oracle container
  
 ### Installing
 
-#### Configuring Behat on the local environment :
-* Installing Behat:
-```
-composer update
-```
-* Verifying Behat:
-```
-vendor/bin/behat -V
-```
-
 #### Configuring Oracle (Client & Server) :
 
 * Inside the container (server) :
@@ -39,4 +29,14 @@ EOF"
 "downloading client librairies"
 pecl install oci8
 (sudo) /bin/bash -c "echo '127.0.0.1 $(hostname)' >> /etc/hosts"
+```
+
+#### Configuring Behat on the local environment :
+* Installing Behat:
+```
+composer update
+```
+* Verifying Behat:
+```
+vendor/bin/behat -V
 ```
