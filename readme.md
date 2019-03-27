@@ -40,3 +40,9 @@ composer update
 ```
 vendor/bin/behat -V
 ```
+
+### Running
+
+```
+docker run -itd --shm-size 1G -p 1521:1521 <imageID>
+```
