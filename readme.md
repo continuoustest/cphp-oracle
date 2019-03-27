@@ -37,7 +37,6 @@ lsnrctl start
 /bin/bash -c "echo '127.0.0.1 $HOSTNAME' >> /etc/hosts"
 expose port 1521
 execute /u01/app/oracle/runOracle.sh
-lsnrctl reload
 ```
 
 * In the local environment (client) :
