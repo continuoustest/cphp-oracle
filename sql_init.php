@@ -15,4 +15,4 @@ make_query($resource, 'alter profile "DEFAULT" limit password_life_time unlimite
 
 make_query($resource, 'alter profile "DEFAULT" limit password_grace_time 14');
 make_query($resource, 'alter user ORACLE identified by ORACLE');
-make_query($resource, 'alter profile "DEFAULT" limit password_reuse_max 10 password_reuse_time 365');%
+make_query($resource, 'alter profile "DEFAULT" limit password_reuse_max 10 password_reuse_time 365');
