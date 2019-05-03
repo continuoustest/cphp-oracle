@@ -1,6 +1,0 @@
-default:
-  suites:
-    oracle_feature:
-      paths:    [ ./features ]
-      contexts: [ OracleContext ]
-

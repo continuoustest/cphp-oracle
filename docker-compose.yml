@@ -13,7 +13,7 @@ services:
     build: 
       context: ./client
     volumes:
-      - ${PWD}/src:/home
+      - ${PWD}:/home
     networks:
       - bridge
 networks:
