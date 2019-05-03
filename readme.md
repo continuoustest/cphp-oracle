@@ -14,7 +14,7 @@ You need to access to the cphp oracle container
 ### Installing
 
 ```
-chmod +x start behat stop
+chmod +x ./local/start ./local/behat ./local/stop
 ```
 
 #### Start Oracle server
