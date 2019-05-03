@@ -1,3 +1,4 @@
+
 # CPHP Oracle
 
 Test Behat for Oracle additional container called by workers 
@@ -12,29 +13,24 @@ You need to access to the cphp oracle container
  
 ### Installing
 
-
-#### Running Oracle image
-
 ```
-docker run -itd --shm-size 1G -p 1521:1521 <imageID>
+chmod +x start behat stop
 ```
 
-#### Configuring Oracle (Client & Server) :
+#### Start Oracle server
 
-While the oracle container is running : 
 ```
-"downloading client librairies"
-pecl install oci8
-(sudo) /bin/bash -c "echo '127.0.0.1 $(hostname)' >> /etc/hosts"
-php sql_init.php
+./local/start
 ```
 
-#### Configuring Behat on the local environment :
-* Installing Behat:
+#### Test with Behat
+
 ```
-composer update
+./local/behat
 ```
-* Verifying Behat:
+
+#### Stop Oracle server
+
 ```
-vendor/bin/behat -V
+./local/stop
 ```
