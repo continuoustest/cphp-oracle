@@ -1,0 +1,5 @@
+#/bin/sh
+
+docker-compose up -d server
+sleep 30
+docker-compose exec server ./updatePassword.sh
